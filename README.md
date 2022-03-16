@@ -4,7 +4,7 @@
 
 ## 安装
 ~~~
-composer require zw/ut-plugin-php
+composer require zhangwen/ut-plugin-php
 ~~~
 
 ## 用法
