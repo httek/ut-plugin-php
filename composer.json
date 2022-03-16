@@ -1,0 +1,28 @@
+{
+    "name": "zw/ut-plugin-php",
+    "description": "ut plugin for php",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "illuminate/support": "5.6.*",
+        "topthink/think-validate": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zw\\Plugin\\Ut\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "enhe",
+            "email": "dev@iluckin.cn"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": false
+        }
+    }
+}
