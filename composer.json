@@ -1,5 +1,5 @@
 {
-    "name": "zw/ut-plugin-php",
+    "name": "zhangwen/ut-plugin-php",
     "description": "ut plugin for php",
     "type": "library",
     "require": {
