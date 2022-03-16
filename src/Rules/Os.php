@@ -1,7 +1,5 @@
 <?php
 
-namespace app\common\service\ut\tags;
-
 namespace Zw\Plugin\Ut\Rules;
 
 use Zw\Plugin\Ut\Rule;
