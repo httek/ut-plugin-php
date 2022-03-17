@@ -42,8 +42,8 @@ class ConsumeStatus extends Rule
             switch (((int) $values[0])) {
             case 0:
                 return join(' ', [
-                    $this->getField('sub_kandian_all'), '<=', 0, 'AND',
-                    $this->getField('vip_sub'), '<=', 0
+                    $this->getField('sub_kandian_all'), '=', 0, 'AND',
+                    $this->getField('vip_sub'), '=', 0
                 ]);
             case 1:
                 return "{$this->getField('common_sub')} != 1";
@@ -58,8 +58,8 @@ class ConsumeStatus extends Rule
             case 0:
                 $segment[] = join(' ', [
                     '(',
-                    $this->getField('sub_kandian_all'), '<=', 0, 'OR',
-                    $this->getField('vip_sub'), '<=', 0, ')'
+                    $this->getField('sub_kandian_all'), '=', 0, 'AND',
+                    $this->getField('vip_sub'), '=', 0, ')'
                 ]); break;
             case 1:
                 $segment[] = "{$this->getField('common_sub')} = 1"; break;
