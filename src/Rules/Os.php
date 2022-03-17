@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 use Zw\Plugin\Ut\SqlBuilder;
 
 /**
- * @rule sex: 性别
+ * @rule sys: 系统
  */
 class Os extends Rule
 {
