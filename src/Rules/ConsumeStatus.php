@@ -42,8 +42,9 @@ class ConsumeStatus extends Rule
             switch (((int) $values[0])) {
             case 0:
                 return join(' ', [
+                    '(',
                     $this->getField('sub_kandian_all'), '>', 0, 'OR',
-                    $this->getField('vip_sub'), '>', 0
+                    $this->getField('vip_sub'), '>', 0, ')'
                 ]);
             case 1:
                 return "{$this->getField('common_sub')} != 1";
