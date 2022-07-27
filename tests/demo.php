@@ -132,7 +132,13 @@ $rules = [
         'field' => 'userReadHistories',
         'calc' => 'notIn',
         'value' => [10069975, 10069932],
-    ]
+    ],
+    [
+        'field' => 'userFavorite',
+        'calc' => 'gt',
+        'value' => [60],
+        'type' => 2
+    ],
 ];
 
 $builder = new SqlBuilder();

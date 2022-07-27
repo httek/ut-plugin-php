@@ -1,0 +1,3090 @@
+[
+  {
+    "tag": "v1.0",
+    "name": "sex",
+    "title": "性别",
+    "type": "checked",
+    "fields": [
+      "sex"
+    ],
+    "items": [
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "男",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "女",
+        "value": 2,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "保密",
+        "value": 3,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "os",
+    "title": "设备",
+    "type": "checked",
+    "fields": [
+      "os"
+    ],
+    "items": [
+      {
+        "tag": "os",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "os",
+        "type": "checked",
+        "title": "iOS",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "os",
+        "type": "checked",
+        "title": "Android",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "subscribe",
+    "title": "关注状态",
+    "type": "checked",
+    "fields": [
+      "subscribe"
+    ],
+    "items": [
+      {
+        "tag": "subscribe",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "subscribe",
+        "type": "checked",
+        "title": "已关注",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "subscribe",
+        "type": "checked",
+        "title": "未关注",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "paid",
+    "title": "充值状态",
+    "type": "checked",
+    "fields": [
+      "paid"
+    ],
+    "items": [
+      {
+        "tag": "paid",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "paid",
+        "type": "checked",
+        "title": "已充值",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "paid",
+        "type": "checked",
+        "title": "未充值",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "region",
+    "title": "地域",
+    "disabled": false,
+    "type": "select",
+    "fields": [
+      "region"
+    ],
+    "items": [
+      {
+        "tag": "region",
+        "type": "select",
+        "title": "全部",
+        "name": "",
+        "value": null,
+        "selected": true
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "vip",
+    "title": "用户状态",
+    "type": "checked",
+    "fields": [
+      "vip"
+    ],
+    "items": [
+      {
+        "tag": "vip",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "vip",
+        "type": "checked",
+        "title": "普通",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "vip",
+        "type": "checked",
+        "title": "VIP",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "recharge_count",
+    "title": "充值次数",
+    "type": "select_and_type",
+    "fields": [
+      "recharge_count.day",
+      "recharge_count.gt",
+      "recharge_count.lt",
+      "recharge_count.eq",
+      "recharge_count.neq",
+      "recharge_count.between"
+    ],
+    "items": [
+      {
+        "tag": "recharge_count",
+        "type": "select",
+        "title": "天内",
+        "name": "day",
+        "options": [
+          {
+            "type": "select",
+            "title": "全部",
+            "name": "",
+            "value": 0,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "3天",
+            "name": "",
+            "value": 3,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "7天",
+            "name": "",
+            "value": 7,
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "recharge_count",
+        "type": "type",
+        "title": "次数",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "recharge_amount",
+    "title": "充值金额",
+    "type": "type",
+    "fields": [
+      "recharge_amount.gt",
+      "recharge_amount.lt",
+      "recharge_amount.eq",
+      "recharge_amount.neq",
+      "recharge_amount.between"
+    ],
+    "items": [
+      {
+        "tag": "recharge_amount",
+        "type": "type",
+        "title": "额度",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "active_time",
+    "title": "活跃时间",
+    "disabled": false,
+    "type": "select_and_type",
+    "fields": [
+      "active_time.time_unit",
+      "active_time.between"
+    ],
+    "items": [
+      {
+        "tag": "active_time",
+        "type": "type",
+        "title": "活跃时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "latest_recharge",
+    "title": "最近一次充值时间",
+    "type": "type_and_select",
+    "fields": [
+      "latest_recharge.time_unit",
+      "latest_recharge.eq",
+      "latest_recharge.gt",
+      "latest_recharge.lt",
+      "latest_recharge.neq",
+      "latest_recharge.between"
+    ],
+    "items": [
+      {
+        "tag": "latest_recharge",
+        "type": "select",
+        "title": "-",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "latest_recharge",
+        "type": "type",
+        "title": "次数",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "balance",
+    "title": "用户余额",
+    "type": "select_and_type",
+    "fields": [
+      "balance.type",
+      "balance.gt",
+      "balance.lt",
+      "balance.eq",
+      "balance.neq",
+      "balance.between"
+    ],
+    "items": [
+      {
+        "tag": "balance",
+        "type": "select",
+        "title": "书币",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "永久书币",
+            "name": "",
+            "value": 3,
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "balance",
+        "type": "type",
+        "title": "余额",
+        "name": "total",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "consume",
+    "title": "订阅情况",
+    "type": "select_and_type",
+    "fields": [
+      "consume"
+    ],
+    "items": [
+      {
+        "tag": "consume",
+        "type": "select",
+        "title": "订阅类型",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "普通订阅",
+            "name": "",
+            "value": 0,
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "VIP订阅",
+            "name": "",
+            "value": 1,
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "未订阅",
+            "name": "",
+            "value": 2,
+            "selected": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "consume_amount",
+    "title": "订阅金额",
+    "type": "select_and_type",
+    "fields": [
+      "consume_amount.type",
+      "consume_amount.gt",
+      "consume_amount.lt",
+      "consume_amount.eq",
+      "consume_amount.neq",
+      "consume_amount.between"
+    ],
+    "items": [
+      {
+        "tag": "consume_amount",
+        "type": "select",
+        "title": "订阅类型",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "全部",
+            "name": "",
+            "value": 0,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "免费书币",
+            "name": "",
+            "value": 1,
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "永久书币",
+            "name": "",
+            "value": 2,
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "consume_amount",
+        "type": "type",
+        "title": "额度",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "created_time",
+    "title": "注册时间",
+    "type": "select_and_type",
+    "fields": [
+      "created_time.time_unit",
+      "created_time.gt",
+      "created_time.lt",
+      "created_time.eq",
+      "created_time.neq",
+      "created_time.between"
+    ],
+    "items": [
+      {
+        "tag": "created_time",
+        "type": "select",
+        "title": "注册时间",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "created_time",
+        "type": "type",
+        "title": "时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "subscribe_time",
+    "title": "关注时间",
+    "type": "select_and_type",
+    "fields": [
+      "subscribe_time.time_unit",
+      "subscribe_time.gt",
+      "subscribe_time.lt",
+      "subscribe_time.eq",
+      "subscribe_time.neq",
+      "subscribe_time.between"
+    ],
+    "items": [
+      {
+        "tag": "subscribe_time",
+        "type": "select",
+        "title": "关注时间",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "subscribe_time",
+        "type": "type",
+        "title": "时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "latest_active_time",
+    "title": "最近一次交互时间",
+    "type": "select_and_type",
+    "fields": [
+      "latest_active_time.time_unit",
+      "latest_active_time.gt",
+      "latest_active_time.lt",
+      "latest_active_time.eq",
+      "latest_active_time.neq",
+      "latest_active_time.between"
+    ],
+    "items": [
+      {
+        "tag": "latest_active_time",
+        "type": "select",
+        "title": "时间单位",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "latest_active_time",
+        "type": "type",
+        "title": "时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "book_categories",
+    "title": "阅读书籍分类",
+    "type": "select",
+    "fields": [
+      "book_categories"
+    ],
+    "items": [
+      {
+        "tag": "book_categories",
+        "type": "select",
+        "title": "全部",
+        "name": "",
+        "value": null,
+        "selected": true
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "read_records",
+    "title": "阅读记录",
+    "type": "type",
+    "fields": [
+      "read_records.day",
+      "read_records.books"
+    ],
+    "items": [
+      {
+        "tag": "read_records",
+        "type": "type",
+        "title": "天内",
+        "name": "day",
+        "value": null,
+        "default": null
+      },
+      {
+        "tag": "read_records",
+        "type": "type",
+        "title": "书籍ID",
+        "name": "books",
+        "value": [],
+        "default": []
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "channels",
+    "title": "渠道",
+    "type": "type",
+    "items": [
+      {
+        "tag": "channels",
+        "type": "type",
+        "title": "渠道",
+        "name": "",
+        "value": [],
+        "default": []
+      }
+    ],
+    "fields": [
+      "channels"
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "user_favorite",
+    "title": "阅读偏好",
+    "type": "select_and_type",
+    "fields": [
+      "user_favorite.type",
+      "user_favorite.gt",
+      "user_favorite.lt",
+      "user_favorite.eq"
+    ],
+    "items": [
+      {
+        "tag": "user_favorite",
+        "type": "select",
+        "title": "频道",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "男频",
+            "name": "",
+            "value": 1,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "女频",
+            "name": "",
+            "value": 2,
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "user_favorite",
+        "type": "type",
+        "title": "比例",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
+
+
+
+[
+  {
+    "tag": "v1.0",
+    "name": "sex",
+    "title": "性别",
+    "type": "checked",
+    "fields": [
+      "sex"
+    ],
+    "items": [
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "男",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "女",
+        "value": 2,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "sex",
+        "type": "checked",
+        "title": "保密",
+        "value": 3,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "os",
+    "title": "设备",
+    "type": "checked",
+    "fields": [
+      "os"
+    ],
+    "items": [
+      {
+        "tag": "os",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "os",
+        "type": "checked",
+        "title": "iOS",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "os",
+        "type": "checked",
+        "title": "Android",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "subscribe",
+    "title": "关注状态",
+    "type": "checked",
+    "fields": [
+      "subscribe"
+    ],
+    "items": [
+      {
+        "tag": "subscribe",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "subscribe",
+        "type": "checked",
+        "title": "已关注",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "subscribe",
+        "type": "checked",
+        "title": "未关注",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "paid",
+    "title": "充值状态",
+    "type": "checked",
+    "fields": [
+      "paid"
+    ],
+    "items": [
+      {
+        "tag": "paid",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "paid",
+        "type": "checked",
+        "title": "已充值",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "paid",
+        "type": "checked",
+        "title": "未充值",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "region",
+    "title": "地域",
+    "disabled": false,
+    "type": "select",
+    "fields": [
+      "region"
+    ],
+    "items": [
+      {
+        "tag": "region",
+        "type": "select",
+        "title": "全部",
+        "name": "",
+        "value": null,
+        "selected": true
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "vip",
+    "title": "用户状态",
+    "type": "checked",
+    "fields": [
+      "vip"
+    ],
+    "items": [
+      {
+        "tag": "vip",
+        "type": "checked",
+        "title": "全部",
+        "value": 0,
+        "name": "",
+        "checked": true
+      },
+      {
+        "tag": "vip",
+        "type": "checked",
+        "title": "普通",
+        "value": 1,
+        "name": "",
+        "checked": false
+      },
+      {
+        "tag": "vip",
+        "type": "checked",
+        "title": "VIP",
+        "value": 2,
+        "name": "",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "recharge_count",
+    "title": "充值次数",
+    "type": "select_and_type",
+    "fields": [
+      "recharge_count.day",
+      "recharge_count.gt",
+      "recharge_count.lt",
+      "recharge_count.eq",
+      "recharge_count.neq",
+      "recharge_count.between"
+    ],
+    "items": [
+      {
+        "tag": "recharge_count",
+        "type": "select",
+        "title": "天内",
+        "name": "day",
+        "options": [
+          {
+            "type": "select",
+            "title": "全部",
+            "name": "",
+            "value": 0,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "3天",
+            "name": "",
+            "value": 3,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "7天",
+            "name": "",
+            "value": 7,
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "recharge_count",
+        "type": "type",
+        "title": "次数",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "recharge_amount",
+    "title": "充值金额",
+    "type": "type",
+    "fields": [
+      "recharge_amount.gt",
+      "recharge_amount.lt",
+      "recharge_amount.eq",
+      "recharge_amount.neq",
+      "recharge_amount.between"
+    ],
+    "items": [
+      {
+        "tag": "recharge_amount",
+        "type": "type",
+        "title": "额度",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "active_time",
+    "title": "活跃时间",
+    "disabled": false,
+    "type": "select_and_type",
+    "fields": [
+      "active_time.time_unit",
+      "active_time.between"
+    ],
+    "items": [
+      {
+        "tag": "active_time",
+        "type": "type",
+        "title": "活跃时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "latest_recharge",
+    "title": "最近一次充值时间",
+    "type": "type_and_select",
+    "fields": [
+      "latest_recharge.time_unit",
+      "latest_recharge.eq",
+      "latest_recharge.gt",
+      "latest_recharge.lt",
+      "latest_recharge.neq",
+      "latest_recharge.between"
+    ],
+    "items": [
+      {
+        "tag": "latest_recharge",
+        "type": "select",
+        "title": "-",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "latest_recharge",
+        "type": "type",
+        "title": "次数",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "balance",
+    "title": "用户余额",
+    "type": "select_and_type",
+    "fields": [
+      "balance.type",
+      "balance.gt",
+      "balance.lt",
+      "balance.eq",
+      "balance.neq",
+      "balance.between"
+    ],
+    "items": [
+      {
+        "tag": "balance",
+        "type": "select",
+        "title": "书币",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "永久书币",
+            "name": "",
+            "value": 3,
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "balance",
+        "type": "type",
+        "title": "余额",
+        "name": "total",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "consume",
+    "title": "订阅情况",
+    "type": "select_and_type",
+    "fields": [
+      "consume"
+    ],
+    "items": [
+      {
+        "tag": "consume",
+        "type": "select",
+        "title": "订阅类型",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "普通订阅",
+            "name": "",
+            "value": 0,
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "VIP订阅",
+            "name": "",
+            "value": 1,
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "未订阅",
+            "name": "",
+            "value": 2,
+            "selected": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "consume_amount",
+    "title": "订阅金额",
+    "type": "select_and_type",
+    "fields": [
+      "consume_amount.type",
+      "consume_amount.gt",
+      "consume_amount.lt",
+      "consume_amount.eq",
+      "consume_amount.neq",
+      "consume_amount.between"
+    ],
+    "items": [
+      {
+        "tag": "consume_amount",
+        "type": "select",
+        "title": "订阅类型",
+        "name": "type",
+        "options": [
+          {
+            "type": "select",
+            "title": "全部",
+            "name": "",
+            "value": 0,
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "免费书币",
+            "name": "",
+            "value": 1,
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "永久书币",
+            "name": "",
+            "value": 2,
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "consume_amount",
+        "type": "type",
+        "title": "额度",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "created_time",
+    "title": "注册时间",
+    "type": "select_and_type",
+    "fields": [
+      "created_time.time_unit",
+      "created_time.gt",
+      "created_time.lt",
+      "created_time.eq",
+      "created_time.neq",
+      "created_time.between"
+    ],
+    "items": [
+      {
+        "tag": "created_time",
+        "type": "select",
+        "title": "注册时间",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "created_time",
+        "type": "type",
+        "title": "时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "subscribe_time",
+    "title": "关注时间",
+    "type": "select_and_type",
+    "fields": [
+      "subscribe_time.time_unit",
+      "subscribe_time.gt",
+      "subscribe_time.lt",
+      "subscribe_time.eq",
+      "subscribe_time.neq",
+      "subscribe_time.between"
+    ],
+    "items": [
+      {
+        "tag": "subscribe_time",
+        "type": "select",
+        "title": "关注时间",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": false
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": true
+          }
+        ]
+      },
+      {
+        "tag": "subscribe_time",
+        "type": "type",
+        "title": "时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "latest_active_time",
+    "title": "最近一次交互时间",
+    "type": "select_and_type",
+    "fields": [
+      "latest_active_time.time_unit",
+      "latest_active_time.gt",
+      "latest_active_time.lt",
+      "latest_active_time.eq",
+      "latest_active_time.neq",
+      "latest_active_time.between"
+    ],
+    "items": [
+      {
+        "tag": "latest_active_time",
+        "type": "select",
+        "title": "时间单位",
+        "name": "time_unit",
+        "options": [
+          {
+            "type": "select",
+            "title": "小时",
+            "name": "",
+            "value": "hour",
+            "selected": true
+          },
+          {
+            "type": "select",
+            "title": "天",
+            "name": "",
+            "value": "day",
+            "selected": false
+          }
+        ]
+      },
+      {
+        "tag": "latest_active_time",
+        "type": "type",
+        "title": "时间",
+        "name": "",
+        "items": [
+          {
+            "type": "type",
+            "title": "大于",
+            "name": "gt",
+            "title_replace": ">",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "大于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "小于",
+            "name": "lt",
+            "title_replace": "<",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "小于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "等于",
+            "name": "eq",
+            "title_replace": "=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "不等于",
+            "name": "neq",
+            "title_replace": "!=",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "不等于",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          },
+          {
+            "type": "type",
+            "title": "介于",
+            "name": "between",
+            "title_replace": "to",
+            "value": null,
+            "default": null,
+            "items": [
+              {
+                "type": "type",
+                "title": "从",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              },
+              {
+                "type": "type",
+                "title": "到",
+                "name": "",
+                "title_replace": "-",
+                "value": null,
+                "default": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "book_categories",
+    "title": "阅读书籍分类",
+    "type": "select",
+    "fields": [
+      "book_categories"
+    ],
+    "items": [
+      {
+        "tag": "book_categories",
+        "type": "select",
+        "title": "全部",
+        "name": "",
+        "value": null,
+        "selected": true
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "read_records",
+    "title": "阅读记录",
+    "type": "type",
+    "fields": [
+      "read_records.day",
+      "read_records.books"
+    ],
+    "items": [
+      {
+        "tag": "read_records",
+        "type": "type",
+        "title": "天内",
+        "name": "day",
+        "value": null,
+        "default": null
+      },
+      {
+        "tag": "read_records",
+        "type": "type",
+        "title": "书籍ID",
+        "name": "books",
+        "value": [],
+        "default": []
+      }
+    ]
+  },
+  {
+    "tag": "v1.0",
+    "name": "channels",
+    "title": "渠道",
+    "type": "type",
+    "items": [
+      {
+        "tag": "channels",
+        "type": "type",
+        "title": "渠道",
+        "name": "",
+        "value": [],
+        "default": []
+      }
+    ],
+    "fields": [
+      "channels"
+    ]
+  }
+]
