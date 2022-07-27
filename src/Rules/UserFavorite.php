@@ -8,9 +8,8 @@ use Zw\Plugin\Ut\SqlBuilder;
 /**
  * @rule user favorite : 用户男女频喜爱度
  *
- * 男：1 -> 2 - 百分比
- * 女： 1 + 百分比 -> 2
- *
+ * 1男频: 1 --> 2 - PCT
+ * 2女频: 1 + PCT --> 2
  */
 class UserFavorite extends Rule
 {
@@ -47,10 +46,11 @@ class UserFavorite extends Rule
             return "/** invalid read_favorite value: {$value} */";
         }
 
-        // 2女频: 1 + PCT --> 2
-        // 1男频: 1 --> 2 - PCT
         $percent = round($value / 100, 2);
         $value = $type == 1 ? (2 - $percent) : (1 + $percent);
+        if ($dbmsType == SqlBuilder::ClickHouse) {
+            $value = "'{$value}'";
+        }
 
         switch ($this->getClac()) {
             case 'lt':
