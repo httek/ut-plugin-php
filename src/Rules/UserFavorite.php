@@ -38,7 +38,7 @@ class UserFavorite extends Rule
      */
     public function getSqlSegment(int $dbmsType = SqlBuilder::MySQL): string
     {
-        $values = array_values(array_unique($this->getValues()));
+        $values = array_values($this->getValues());
         foreach ($values as $index => $value) {
             if ($value < 1 || $value > 100) {
                 return "/** invalid read_favorite values.{$index}: {$value} */";
