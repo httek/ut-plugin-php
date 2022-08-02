@@ -45,99 +45,10 @@ $rules = [
         'unit' => 'hour'
     ],
     [
-        'field' => 'activateAt',
-        'calc' => 'between',
-        'value' => [1, 4],
-        'type' => 1,
-        'unit' => 'hour'
-    ],
-    [
-        'field' => 'interactAt',
-        'calc' => 'between',
-        'value' => [1, 4],
-        'type' => 1,
-        'unit' => 'hour'
-    ],
-    [
-        'field' => 'paidAt',
-        'calc' => 'between',
-        'value' => [1, 4],
-        'type' => 1,
-        'unit' => '-'
-    ],
-    [
-        'field' => 'paidAt',
-        'calc' => 'between',
-        'value' => [1, 4],
-        'type' => 1,
-        'unit' => 'hour'
-    ],
-    // paidStatus
-    [
-        'field' => 'paidStatus',
-        'calc' => 'in',
-        'value' => [1],
-        'type' => 1,
-        'unit' => 'hour'
-    ],
-    [
-        'field' => 'paidBooks',
-        'calc' => 'in',
-        'value' => [69975, 10068826],
-    ],
-    [
-        'field' => 'consumeBooks',
-        'calc' => 'notIn',
-        'value' => [69975, 10068826],
-    ],
-    [
-        'field' => 'bookCategories',
-        'calc' => 'in',
-        'value' => [8,3,23],
-    ],
-    [
-        'field' => 'userBalance',
-        'calc' => 'between',
-        'value' => [50, 100, 200],
-        'unit' => '',
-        'type' => 1
-    ],
-    [
-        'field' => 'paidAmount',
-        'calc' => 'between',
-        'value' => [50, 100, 200],
-        'unit' => '',
-        'type' => 2
-    ],
-    [
-        'field' => 'paidTotal',
-        'calc' => 'in',
-        'value' => [50, 200],
-        'unit' => '',
-        'type' => 0
-    ],
-    [
-        'field' => 'consumeAmount',
-        'calc' => 'between',
-        'value' => [50, 200],
-        'unit' => '',
-        'type' => 2
-    ],
-    [
-        'field' => 'consumeStatus',
-        'calc' => 'in',
-        'value' => [1, 2],
-    ],
-    [
-        'field' => 'userReadHistories',
-        'calc' => 'notIn',
-        'value' => [10069975, 10069932],
-    ],
-    [
         'field' => 'userFavorite',
-        'calc' => 'gt',
-        'value' => [60],
-        'type' => 2
+        'calc' => 'between',
+        'value' => [1, 10],
+        'type' => 1
     ],
 ];
 

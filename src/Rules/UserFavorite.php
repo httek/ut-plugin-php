@@ -17,7 +17,7 @@ class UserFavorite extends Rule
      * @var array|string[]
      */
     protected $validationRules = [
-        'field' => 'require|eq:userFavorite', 'type' => 'in:1,2', 'calc' => 'require|in:eq,lt,gt', 'value' => 'require|array|length:1'
+        'field' => 'require|eq:userFavorite', 'type' => 'in:1,2', 'calc' => 'require|in:between', 'value' => 'require|array|length:2'
     ];
 
     /**
@@ -38,39 +38,34 @@ class UserFavorite extends Rule
      */
     public function getSqlSegment(int $dbmsType = SqlBuilder::MySQL): string
     {
-        $value = array_values(array_unique($this->getValues()))[0] ?? 0;
-        $field = $this->getField('read_favorite');
-        $type = $this->getMeta()['type'] ?? 0;
-
-        if ($value <= 0 || $value > 100) {
-            return "/** invalid read_favorite value: {$value} */";
+        $values = array_values(array_unique($this->getValues()));
+        foreach ($values as $index => $value) {
+            if ($value < 1 || $value > 100) {
+                return "/** invalid read_favorite values.{$index}: {$value} */";
+            }
         }
 
-        $percent = round($value / 100, 2);
-        $value = $type == 1 ? (2 - $percent) : (1 + $percent);
+        $left = $right = 0;
+        switch (((int) ($this->getMeta()['type'] ?? 0)))
+        {
+            case 1:
+                $right = round(2 - ($values[0] / 100),2);
+                $left = round(2 - ($values[1] / 100),2);
+                break;
+            case 2:
+                $left = round(1 + ($values[0] / 100), 2);
+                $right = round(1 + ($values[1] / 100), 2);
+                break;
+        }
+
+        if ($left == 0 || $right == 0) {
+            return "/** invalid read_favorite values: {$left} - {$right} */";
+        }
+
         if ($dbmsType == SqlBuilder::ClickHouse) {
-            $value = "'{$value}'";
+            $left = "'{$left}'"; $right = "'{$right}'";
         }
 
-        switch ($this->getClac()) {
-            case 'lt':
-                $op = $type == 1 ? '>' : '<';
-                return join(' ', [$field, $op, $value]);
-            case 'gt':
-                $op = $type == 1 ? '<' : '>';
-                return join(' ', [$field, $op, $value]);
-            case 'eq':
-                return join(' ', [$field, '=', $value]);
-        }
-
-        return '';
-    }
-
-    /**
-     * @return string
-     */
-    public function getClac(): string
-    {
-        return $this->getMeta()['calc'] ?? '';
+        return join(' ', [$this->getField('read_favorite'), 'BETWEEN', $left, 'AND', $right]);
     }
 }
